@@ -6,26 +6,50 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    let sample = ["牛乳を買う", "掃除をする", "アプリ開発の勉強をする"]
-    
+    @IBOutlet weak var articlelisttableview: UITableView!
+        //let sample = ["牛乳を買う", "掃除をする", "アプリ開発の勉強をする"]
+    let decoder: JSONDecoder = JSONDecoder()
+    var articles = [Article]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        getQiitaArticles()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+
+    private func setup(){
+        articlelisttableview.delegate = self
+        articlelisttableview.dataSource = self
     }
-    
+
+    private func getQiitaArticles(){
+        AF.request("https://qiita.com/api/v2/items").responseJSON { response in
+            switch response.result {
+            case .success:
+                do{
+                    self.articles = try self.decoder.decode([Article].self, from: response.data!)
+                    self.articlelisttableview.reloadData()
+                } catch {
+                    print("デコードに失敗しました")
+                }
+            case .failure(let error):
+                print("error", error)
+            }
+        }
+    }
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sample.count
+        articles.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = self.sample[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath)
+        cell.textLabel?.text = articles[indexPath.row].title
         return cell
     }
 }
