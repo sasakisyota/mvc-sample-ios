@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20CCD0BAE3297C85C236A03F /* Pods_mvc_sample_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F579E2B9910574419A206E /* Pods_mvc_sample_ios.framework */; };
+		965B471E2700ABD90006BB0A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B471D2700ABD90006BB0A /* Article.swift */; };
 		96960CAF26FF06E70041F398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96960CAE26FF06E70041F398 /* AppDelegate.swift */; };
 		96960CB126FF06E70041F398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96960CB026FF06E70041F398 /* SceneDelegate.swift */; };
 		96960CB326FF06E70041F398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96960CB226FF06E70041F398 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16274723EE6894AF4973AA4E /* Pods-mvc-sample-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvc-sample-ios.debug.xcconfig"; path = "Target Support Files/Pods-mvc-sample-ios/Pods-mvc-sample-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		965B471D2700ABD90006BB0A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		96960CAB26FF06E70041F398 /* mvc-sample-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-sample-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96960CAE26FF06E70041F398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96960CB026FF06E70041F398 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		96960CB726FF06E90041F398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96960CBA26FF06E90041F398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96960CBC26FF06E90041F398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3F579E2B9910574419A206E /* Pods_mvc_sample_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvc_sample_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0DA75027C8EAED5A0406DE7 /* Pods-mvc-sample-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvc-sample-ios.release.xcconfig"; path = "Target Support Files/Pods-mvc-sample-ios/Pods-mvc-sample-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CCD0BAE3297C85C236A03F /* Pods_mvc_sample_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				96960CAD26FF06E70041F398 /* mvc-sample-ios */,
 				96960CAC26FF06E70041F398 /* Products */,
+				A9069CAB02E15BD5FC903ACB /* Pods */,
+				BE1A883D3CEF0C44AC5497BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +68,30 @@
 				96960CAE26FF06E70041F398 /* AppDelegate.swift */,
 				96960CB026FF06E70041F398 /* SceneDelegate.swift */,
 				96960CB226FF06E70041F398 /* ViewController.swift */,
+				965B471D2700ABD90006BB0A /* Article.swift */,
 				96960CB426FF06E70041F398 /* Main.storyboard */,
 				96960CB726FF06E90041F398 /* Assets.xcassets */,
 				96960CB926FF06E90041F398 /* LaunchScreen.storyboard */,
 				96960CBC26FF06E90041F398 /* Info.plist */,
 			);
 			path = "mvc-sample-ios";
+			sourceTree = "<group>";
+		};
+		A9069CAB02E15BD5FC903ACB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16274723EE6894AF4973AA4E /* Pods-mvc-sample-ios.debug.xcconfig */,
+				E0DA75027C8EAED5A0406DE7 /* Pods-mvc-sample-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE1A883D3CEF0C44AC5497BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3F579E2B9910574419A206E /* Pods_mvc_sample_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96960CBF26FF06E90041F398 /* Build configuration list for PBXNativeTarget "mvc-sample-ios" */;
 			buildPhases = (
+				001FA318C805D502C53BB4FD /* [CP] Check Pods Manifest.lock */,
 				96960CA726FF06E70041F398 /* Sources */,
 				96960CA826FF06E70041F398 /* Frameworks */,
 				96960CA926FF06E70041F398 /* Resources */,
+				8019709DD8FCB9F201C164EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +162,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		001FA318C805D502C53BB4FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mvc-sample-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8019709DD8FCB9F201C164EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvc-sample-ios/Pods-mvc-sample-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvc-sample-ios/Pods-mvc-sample-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mvc-sample-ios/Pods-mvc-sample-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96960CA726FF06E70041F398 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965B471E2700ABD90006BB0A /* Article.swift in Sources */,
 				96960CB326FF06E70041F398 /* ViewController.swift in Sources */,
 				96960CAF26FF06E70041F398 /* AppDelegate.swift in Sources */,
 				96960CB126FF06E70041F398 /* SceneDelegate.swift in Sources */,
@@ -284,6 +356,7 @@
 		};
 		96960CC026FF06E90041F398 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16274723EE6894AF4973AA4E /* Pods-mvc-sample-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +385,7 @@
 		};
 		96960CC126FF06E90041F398 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0DA75027C8EAED5A0406DE7 /* Pods-mvc-sample-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
