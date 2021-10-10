@@ -11,45 +11,35 @@ import Alamofire
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var articlelisttableview: UITableView!
-        //let sample = ["牛乳を買う", "掃除をする", "アプリ開発の勉強をする"]
     let decoder: JSONDecoder = JSONDecoder()
-    var articles = [Article]()
-
+    var list = [Article]()
+    
+    //    let GetQiitaArticles = getQiitaArticles()
+    let allArticle = AllArticle()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        getQiitaArticles()
+        allArticle.getQiitaArticles(completion: { [weak self] result in
+            guard let self = self else { return }
+            self.list = result
+            self.articlelisttableview.reloadData()
+        })
     }
-
+    
+    
     private func setup(){
         articlelisttableview.delegate = self
         articlelisttableview.dataSource = self
     }
-
-    private func getQiitaArticles(){
-        AF.request("https://qiita.com/api/v2/items").responseJSON { response in
-            switch response.result {
-            case .success:
-                do{
-                    self.articles = try self.decoder.decode([Article].self, from: response.data!)
-                    self.articlelisttableview.reloadData()
-                } catch {
-                    print("デコードに失敗しました")
-                }
-            case .failure(let error):
-                print("error", error)
-            }
-        }
-    }
-
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        articles.count
+        return list.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath)
-        cell.textLabel?.text = articles[indexPath.row].title
+        cell.textLabel?.text = list[indexPath.row].title
         return cell
     }
 }
