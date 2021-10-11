@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20CCD0BAE3297C85C236A03F /* Pods_mvc_sample_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F579E2B9910574419A206E /* Pods_mvc_sample_ios.framework */; };
+		96185B42270CB8550003E807 /* AllArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96185B41270CB8550003E807 /* AllArticle.swift */; };
 		965B471E2700ABD90006BB0A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B471D2700ABD90006BB0A /* Article.swift */; };
 		96960CAF26FF06E70041F398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96960CAE26FF06E70041F398 /* AppDelegate.swift */; };
 		96960CB126FF06E70041F398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96960CB026FF06E70041F398 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		16274723EE6894AF4973AA4E /* Pods-mvc-sample-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvc-sample-ios.debug.xcconfig"; path = "Target Support Files/Pods-mvc-sample-ios/Pods-mvc-sample-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		96185B41270CB8550003E807 /* AllArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticle.swift; sourceTree = "<group>"; };
 		965B471D2700ABD90006BB0A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		96960CAB26FF06E70041F398 /* mvc-sample-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-sample-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96960CAE26FF06E70041F398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		965B473F27081B990006BB0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				965B471D2700ABD90006BB0A /* Article.swift */,
+				96185B41270CB8550003E807 /* AllArticle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		965B474027081BA40006BB0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				96960CB226FF06E70041F398 /* ViewController.swift */,
+				96960CAE26FF06E70041F398 /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		965B474127081BAF0006BB0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96960CB426FF06E70041F398 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		96960CA226FF06E70041F398 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +93,10 @@
 		96960CAD26FF06E70041F398 /* mvc-sample-ios */ = {
 			isa = PBXGroup;
 			children = (
-				96960CAE26FF06E70041F398 /* AppDelegate.swift */,
+				965B473F27081B990006BB0A /* Model */,
+				965B474127081BAF0006BB0A /* View */,
+				965B474027081BA40006BB0A /* Controller */,
 				96960CB026FF06E70041F398 /* SceneDelegate.swift */,
-				96960CB226FF06E70041F398 /* ViewController.swift */,
-				965B471D2700ABD90006BB0A /* Article.swift */,
-				96960CB426FF06E70041F398 /* Main.storyboard */,
 				96960CB726FF06E90041F398 /* Assets.xcassets */,
 				96960CB926FF06E90041F398 /* LaunchScreen.storyboard */,
 				96960CBC26FF06E90041F398 /* Info.plist */,
@@ -213,6 +240,7 @@
 				96960CB326FF06E70041F398 /* ViewController.swift in Sources */,
 				96960CAF26FF06E70041F398 /* AppDelegate.swift in Sources */,
 				96960CB126FF06E70041F398 /* SceneDelegate.swift in Sources */,
+				96185B42270CB8550003E807 /* AllArticle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

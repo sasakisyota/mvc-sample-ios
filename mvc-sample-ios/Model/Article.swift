@@ -4,6 +4,7 @@
 //
 //  Created by 佐々木翔太 on 2021/09/26.
 //
+import Foundation
 
 struct Article: Codable {
     let title: String
@@ -13,3 +14,4 @@ struct Article: Codable {
         var name: String
     }
 }
+
